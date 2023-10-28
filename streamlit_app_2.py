@@ -48,3 +48,43 @@ chart_data = pd.DataFrame(
     columns=['a', 'b', 'c']
 )
 st.line_chart(chart_data)
+
+############################# EXEMPLO 6 #############################
+
+st.subheader('st.selectbox')
+
+option = st.selectbox(
+    'What is your favorite color?',
+    ('Blue', 'Black', 'Green'))
+
+st.write('Your favorite color is ', option)
+
+############################# EXEMPLO 7 #############################
+
+st.subheader('st.multiselect')
+
+options = st.multiselect(
+    'What are your favorite colors',
+    ['Green', 'Yellow', 'Red', 'Blue'],
+    ['Yellow','Red'])
+
+st.write('You select:', options)
+
+############################# EXEMPLO 8 #############################
+
+st.subheader('st.checkbox')
+
+st.write ('What would you like to order?')
+
+icecream = st.checkbox('Ice cream')
+coffee = st.checkbox('Coffee')
+cola = st.checkbox('Cola')
+
+if icecream:
+    st.write("Great! Here's Some more")
+
+if coffee:
+    st.write("Pkay, here's some coffee")
+
+if cola:
+    st.write("Here you go")
